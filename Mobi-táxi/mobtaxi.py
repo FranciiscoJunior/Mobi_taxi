@@ -10,6 +10,7 @@ conexao = psycopg2.connect(
 
 cursor = conexao.cursor()
 
+
 def menu_mototaxi():
     print('MENU')
     print('1 - Cadastrar Mototaxista ')
@@ -57,6 +58,7 @@ def visualizar_mototaxi():
         print('')
         contador = contador + 1
 
+
 def atualizar_mototaxi():
     telefone = str(input('Atualizar telefone: '))
     codigo = str(input('codigo: '))
@@ -66,7 +68,8 @@ def atualizar_mototaxi():
 
     print('Operação realizada com sucesso!')
     print('Os dados atualizados são: ')
-    cursor.execute(f'''SELECT nome, telefone, marca_moto, placa, dia_trabalho FROM mototaxi where codigo = '{codigo}' ''')
+    cursor.execute(
+        f'''SELECT nome, telefone, marca_moto, placa, dia_trabalho FROM mototaxi where codigo = '{codigo}' ''')
     dado_mototaxi = cursor.fetchall()
     for mototaxi in dado_mototaxi:
         print('Nome: {}'.format(mototaxi[0]))
@@ -75,6 +78,7 @@ def atualizar_mototaxi():
         print('placa: {}'.format(mototaxi[3]))
         print('dia_trabalho: {}'.format(mototaxi[4]))
         print('')
+
 
 def deletar_mototaxi():
     nome = str(input('Informe o codigo do mototaxista que deseja excluir: '))
@@ -85,6 +89,7 @@ def deletar_mototaxi():
         print('Mototaxista excluido com sucesso!')
     else:
         print('Não foi possível excluir o mototaxista!')
+
 
 menu_mototaxi()
 conexao.commit()

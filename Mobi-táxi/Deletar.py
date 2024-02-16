@@ -18,7 +18,7 @@ def deletar_mototaxi():
     window = tk.Tk()
 
     window.geometry('350x250')
-    window.title('MOBILIDADE')
+    window.title('MOB TÁXI')
 
     def deletar_mototaxi():
         cpf = entrada6.get()

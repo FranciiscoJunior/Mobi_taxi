@@ -21,14 +21,18 @@ window = tk.Tk()
 window.geometry('800x350')
 window.title('MOB TÁXI')
 
+
 def redirecionar_cadastro_mototaxi():
     redirecionar_cadastro()
+
 
 def redirecionar_atualizar_mototaxi():
     redirecionar_atualizar()
 
+
 def redirecionar_deletar_mototaxi():
     deletar_mototaxi()
+
 
 def visualizar_mototaxi():
     cursor.execute(f'''SELECT * FROM mototaxi ''')
@@ -38,12 +42,15 @@ def visualizar_mototaxi():
     for dado in dados_mototaxi:
         pop.insert("", END, values=(dado[2], dado[1], dado[3], dado[4], dado[5]))
 
+
 def clear_list():
     for item in pop.get_children():
         pop.delete(item)
 
+
 def botao_sair():
     window.destroy()
+
 
 label0 = tk.Label(window, text='MOTOTAXISTAS DISPONÍVEIS', fg='black', font='bold')
 label0.place(x=360, y=20)
@@ -57,22 +64,26 @@ botao_sair.place(x=30, y=250)
 botao_clear = tk.Button(window, fg='black', text='LIMPAR', bg='light blue', height=2, width=10, command=clear_list)
 botao_clear.place(x=110, y=250)
 
-botao_adicionar = tk.Button(window, fg='black', text='CADASTRAR', bg='light blue', height=2, width=20, command=redirecionar_cadastro_mototaxi)
+botao_adicionar = tk.Button(window, fg='black', text='CADASTRAR', bg='light blue', height=2, width=20,
+                            command=redirecionar_cadastro_mototaxi)
 botao_adicionar.place(x=30, y=50)
 
-botao_atualizar = tk.Button(window, fg='black', text='ATUALIZAR', bg='light blue', height=2, width=20, command=redirecionar_atualizar_mototaxi)
+botao_atualizar = tk.Button(window, fg='black', text='ATUALIZAR', bg='light blue', height=2, width=20,
+                            command=redirecionar_atualizar_mototaxi)
 botao_atualizar.place(x=30, y=100)
 
-botao_deletar = tk.Button(window, fg='black', text='DELETAR', bg='light blue', height=2, width=20, command=redirecionar_deletar_mototaxi)
+botao_deletar = tk.Button(window, fg='black', text='DELETAR', bg='light blue', height=2, width=20,
+                          command=redirecionar_deletar_mototaxi)
 botao_deletar.place(x=30, y=150)
 
-botao_visualizar = tk.Button(window, fg='black', text='VISUALIZAR', bg='light blue', height=2, width=20, command=visualizar_mototaxi)
+botao_visualizar = tk.Button(window, fg='black', text='VISUALIZAR', bg='light blue', height=2, width=20,
+                             command=visualizar_mototaxi)
 botao_visualizar.place(x=30, y=200)
 
 pop = ttk.Treeview(window, selectmode='browse')
 pop.place(x=200, y=60)
 
-label01 = tk.Label(window, text='Desenvolvido por Francisco Júnior alguns direitos reservados', fg='black', font='bold')
+label01 = tk.Label(window, text='Mob táxi - © v-0.0.1 - Desenvolvido por Francisco Júnior', fg='black', font='bold')
 label01.place(x=260, y=300)
 
 pop["columns"] = ("1", "2", "3", "4", "5")

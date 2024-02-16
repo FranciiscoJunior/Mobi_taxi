@@ -18,7 +18,7 @@ def redirecionar_atualizar():
     window = tk.Tk()
 
     window.geometry('450x250')
-    window.title('MOBILIDADE')
+    window.title('MOBI TÁXI')
 
     def atualizar_mototaxi():
         #nome = entrada1.get()

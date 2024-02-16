@@ -18,7 +18,7 @@ def redirecionar_cadastro():
     window = tk.Tk()
 
     window.geometry('650x250')
-    window.title('MOBILIDADE')
+    window.title('MOB TÁXI')
 
     def cadastrar_mototaxi():
         nome = entrada1.get()
@@ -92,8 +92,8 @@ def redirecionar_cadastro():
     botao_limpar = tk.Button(window, fg='black', text='LIMPAR', bg='light blue', height=2, width=10, command=clear_text)
     botao_limpar.place(x=30, y=110)
 
-    botao_sair = tk.Button(window, fg='black', text='SAIR', bg='light blue', height=2, width=10, command=botao_sair)
+    botao_sair = tk.Button(window, fg='black', text='VOLTAR', bg='light blue', height=2, width=10, command=botao_sair)
     botao_sair.place(x=110, y=110)
 
-    label01 = tk.Label(window, text='Desenvolvido por Francisco Júnior alguns direitos reservados', fg='black', font='bold')
+    label01 = tk.Label(window, text='Mob táxi - © v-0.0.1 - Desenvolvido por Francisco Júnior', fg='black', font='bold')
     label01.place(x=150, y=200)
