@@ -52,10 +52,10 @@ def botao_sair():
     window.destroy()
 
 
-label0 = tk.Label(window, text='MOTOTAXISTAS DISPONÍVEIS', fg='black', font='bold')
+label0 = tk.Label(window, text='Mototaxistas disponíveis', fg='black', font='bold')
 label0.place(x=360, y=20)
 
-label00 = tk.Label(window, text='MENU', fg='black', font='bold')
+label00 = tk.Label(window, text='Menu', fg='black', font='bold')
 label00.place(x=80, y=20)
 
 botao_sair = tk.Button(window, fg='black', text='SAIR', bg='light blue', height=2, width=10, command=botao_sair)
@@ -83,7 +83,7 @@ botao_visualizar.place(x=30, y=200)
 pop = ttk.Treeview(window, selectmode='browse')
 pop.place(x=200, y=60)
 
-label01 = tk.Label(window, text='Mob táxi - © v-0.0.1 - Desenvolvido por Francisco Júnior', fg='black', font='bold')
+label01 = tk.Label(window, text='Mob táxi - © v - 0.0.1 - Desenvolvido por Francisco Júnior', fg='black', font='bold')
 label01.place(x=260, y=300)
 
 pop["columns"] = ("1", "2", "3", "4", "5")

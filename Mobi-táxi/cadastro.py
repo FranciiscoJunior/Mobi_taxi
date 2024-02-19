@@ -1,6 +1,5 @@
 import tkinter as tk
 from tkinter import *
-from tkinter import ttk
 from tkinter import messagebox
 import psycopg2
 
@@ -47,11 +46,11 @@ def redirecionar_cadastro():
         for item in pop.get_children():
             pop.delete(item)
 
-    label0 = tk.Label(window, text='CADASTRAR UM NOVO MOTOTAXI', fg='black', font='bold',)
-    label0.place(x=200, y=30)
+    label0 = tk.Label(window, text='Cadastrar novo mototáxi', fg='black', font='bold',)
+    label0.place(x=230, y=20)
 
     label1 = tk.Label(window, text='NOME', fg='black')
-    label1.place(x=190, y=60)
+    label1.place(x=205, y=60)
 
     entrada1 = Entry(window)
     entrada1.place(x=250, y=60)
@@ -69,7 +68,7 @@ def redirecionar_cadastro():
     entrada3.place(x=470, y=60)
 
     label4 = tk.Label(window, text='PLACA', fg='black')
-    label4.place(x=190, y=120)
+    label4.place(x=205, y=120)
 
     entrada4 = Entry(window)
     entrada4.place(x=250, y=120)
@@ -81,7 +80,7 @@ def redirecionar_cadastro():
     entrada5.place(x=470, y=90)
 
     label6 = tk.Label(window, text='CPF', fg='black')
-    label6.place(x=420, y=120)
+    label6.place(x=440, y=120)
 
     entrada6 = Entry(window)
     entrada6.place(x=470, y=120)
@@ -95,5 +94,5 @@ def redirecionar_cadastro():
     botao_sair = tk.Button(window, fg='black', text='VOLTAR', bg='light blue', height=2, width=10, command=botao_sair)
     botao_sair.place(x=110, y=110)
 
-    label01 = tk.Label(window, text='Mob táxi - © v-0.0.1 - Desenvolvido por Francisco Júnior', fg='black', font='bold')
+    label01 = tk.Label(window, text='Mob táxi - © v - 0.0.1 - Desenvolvido por Francisco Júnior', fg='black', font='bold')
     label01.place(x=150, y=200)

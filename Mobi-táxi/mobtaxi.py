@@ -85,7 +85,7 @@ def deletar_mototaxi():
     if (op == 's'):
         deletar_mototaxi()
         cursor.execute(f'''DELETE FROM mototaxi
-        WHERE codigo = '{codigo}' ''')
+        WHERE codigo = '{cpf}' ''')
         print('Mototaxista excluido com sucesso!')
     else:
         print('Não foi possível excluir o mototaxista!')
