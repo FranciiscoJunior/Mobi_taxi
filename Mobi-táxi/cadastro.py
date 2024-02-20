@@ -46,7 +46,7 @@ def redirecionar_cadastro():
         for item in pop.get_children():
             pop.delete(item)
 
-    label0 = tk.Label(window, text='Cadastrar novo mototáxi', fg='black', font='bold',)
+    label0 = tk.Label(window, text='Cadastrar novo mototáxi', fg='black', font='bold')
     label0.place(x=230, y=20)
 
     label1 = tk.Label(window, text='NOME', fg='black')

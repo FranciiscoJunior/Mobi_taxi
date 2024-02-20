@@ -33,7 +33,7 @@ def redirecionar_atualizar():
         cpf = entrada6.get()
         print(cpf)
 
-        cursor.execute(F'''UPDATE mototaxi SET telefone = '{telefone}' where codigo = '{cpf}' ''')
+        cursor.execute(F'''UPDATE mototaxi SET telefone = '{telefone}' where cpf = '{cpf}' ''')
         conexao.commit()
         tk.messagebox.showinfo(title='AVISO', message='Dados Atualizados')
 

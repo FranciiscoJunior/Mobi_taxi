@@ -22,7 +22,7 @@ def deletar_mototaxi():
     def deletar_mototaxi():
         cpf = entrada6.get()
 
-        cursor.execute(f'''DELETE FROM mototaxi where codigo = '{cpf}' ''')
+        cursor.execute(f'''DELETE FROM mototaxi where cpf = '{cpf}' ''')
         conexao.commit()
         tk.messagebox.showinfo(title='AVISO', message='Dados Deletados')
 
