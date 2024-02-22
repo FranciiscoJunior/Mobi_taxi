@@ -1,9 +1,13 @@
 {
     "cSpell.words": [
         "acesso",
+        "atualizar",
+        "botao",
         "cadastre",
+        "cadastro",
         "conexao",
         "contato",
+        "Deletar",
         "Descrição",
         "fique",
         "gráfica",
@@ -16,6 +20,7 @@
         "possibilita",
         "projeto",
         "psycopg",
+        "redirecionar",
         "sair",
         "SPFC",
         "suas",
@@ -27,6 +32,7 @@
         "transporte",
         "usuários",
         "utilizado",
-        "utilizando"
+        "utilizando",
+        "visualizar"
     ]
 }
