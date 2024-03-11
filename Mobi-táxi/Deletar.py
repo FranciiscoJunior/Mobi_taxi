@@ -20,9 +20,9 @@ def deletar_mototaxi():
     window.title('MOB TÁXI')
 
     def deletar_mototaxi():
-        cpf = entrada6.get()
+        codigo = entrada6.get()
 
-        cursor.execute(f'''DELETE FROM mototaxi where cpf = '{cpf}' ''')
+        cursor.execute(f'''DELETE FROM mototaxi where codigo = '{codigo}' ''')
         conexao.commit()
         tk.messagebox.showinfo(title='AVISO', message='Dados Deletados')
 
@@ -32,11 +32,11 @@ def deletar_mototaxi():
     def botao_sair():
             window.destroy()
 
-    label6 = tk.Label(window, text='CPF', fg='black')
+    label6 = tk.Label(window, text='CÓDIGO', fg='black')
     label6.place(x=70, y=60)
 
     entrada6 = Entry(window)
-    entrada6.place(x=100, y=60)
+    entrada6.place(x=120, y=60)
 
     label0 = tk.Label(window, text=' Deletar mototaxi', fg='black', font='bold')
     label0.place(x=90, y=20)

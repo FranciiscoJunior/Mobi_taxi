@@ -18,7 +18,7 @@ conexao = psycopg2.connect(
 cursor = conexao.cursor()
 window = tk.Tk()
 
-window.geometry('800x350')
+window.geometry('900x350')
 window.title('MOB TÁXI')
 
 
@@ -40,7 +40,7 @@ def visualizar_mototaxi():
     for item in pop.get_children():
         pop.delete(item)
     for dado in dados_mototaxi:
-        pop.insert("", END, values=(dado[2], dado[1], dado[3], dado[4], dado[5]))
+        pop.insert("", END, values=(dado[0], dado[2], dado[1], dado[3], dado[4], dado[5]))
 
 
 def clear_list():
@@ -73,11 +73,11 @@ botao_atualizar = tk.Button(window, fg='black', text='ATUALIZAR', bg='light blue
 botao_atualizar.place(x=30, y=100)
 
 botao_deletar = tk.Button(window, fg='black', text='DELETAR', bg='light blue', height=2, width=20,
-                          command=redirecionar_deletar_mototaxi)
+                        command=redirecionar_deletar_mototaxi)
 botao_deletar.place(x=30, y=150)
 
 botao_visualizar = tk.Button(window, fg='black', text='VISUALIZAR', bg='light blue', height=2, width=20,
-                             command=visualizar_mototaxi)
+                            command=visualizar_mototaxi)
 botao_visualizar.place(x=30, y=200)
 
 pop = ttk.Treeview(window, selectmode='browse')
@@ -86,14 +86,16 @@ pop.place(x=200, y=60)
 label01 = tk.Label(window, text='Mob táxi - © v - 0.0.1 - Desenvolvido por Francisco Júnior', fg='black', font='bold')
 label01.place(x=260, y=300)
 
-pop["columns"] = ("1", "2", "3", "4", "5")
+pop["columns"] = ("0", "1", "2", "3", "4", "5")
 pop['show'] = 'headings'
+pop.column("0", width=115, anchor='c')
 pop.column("1", width=115, anchor='c')
 pop.column("2", width=115, anchor='c')
 pop.column("3", width=115, anchor='c')
 pop.column("4", width=115, anchor='c')
 pop.column("5", width=115, anchor='c')
 
+pop.heading("0", text="CÓDIGO")
 pop.heading("1", text="TELEFONE")
 pop.heading("2", text="NOME MOTORISTA")
 pop.heading("3", text="MARCA DA MOTO")

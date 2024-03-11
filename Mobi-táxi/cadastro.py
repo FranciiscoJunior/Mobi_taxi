@@ -25,6 +25,7 @@ def redirecionar_cadastro():
         marca_moto = entrada3.get()
         placa = entrada4.get()
         dia_trabalho = entrada5.get()
+        codigo = entrada6.get()
 
         cursor.execute(F'''INSERT INTO mototaxi (nome, telefone, marca_moto, placa, dia_trabalho) 
     values ('{nome}','{telefone}','{marca_moto}','{placa}','{dia_trabalho}')''')
@@ -37,7 +38,7 @@ def redirecionar_cadastro():
         entrada3.delete(0, END)
         entrada4.delete(0, END)
         entrada5.delete(0, END)
-        entrada6.delete(0, END)
+        #entrada6.delete(0, END)
 
     def botao_sair():
         window.destroy()
@@ -79,11 +80,11 @@ def redirecionar_cadastro():
     entrada5 = Entry(window)
     entrada5.place(x=470, y=90)
 
-    label6 = tk.Label(window, text='CPF', fg='black')
-    label6.place(x=440, y=120)
+    #label6 = tk.Label(window, text='CÓDIGO', fg='black')
+    #label6.place(x=415, y=120)
 
-    entrada6 = Entry(window)
-    entrada6.place(x=470, y=120)
+    #entrada6 = Entry(window)
+    #entrada6.place(x=470, y=120)
 
     botao_adicionar = tk.Button(window, fg='black', text='CADASTRAR', bg='light blue', height=2, width=20, command=cadastrar_mototaxi)
     botao_adicionar.place(x=30, y=60)

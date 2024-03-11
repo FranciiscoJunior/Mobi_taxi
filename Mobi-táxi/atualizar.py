@@ -30,10 +30,10 @@ def redirecionar_atualizar():
         #print(placa)
         #dia_trabalho = entrada5.get()
         #print(dia_trabalho)
-        cpf = entrada6.get()
-        print(cpf)
+        codigo = entrada6.get()
+        print(codigo)
 
-        cursor.execute(F'''UPDATE mototaxi SET telefone = '{telefone}' where cpf = '{cpf}' ''')
+        cursor.execute(F'''UPDATE mototaxi SET telefone = '{telefone}' where codigo = '{codigo}' ''')
         conexao.commit()
         tk.messagebox.showinfo(title='AVISO', message='Dados Atualizados')
 
@@ -48,7 +48,7 @@ def redirecionar_atualizar():
     def botao_sair():
         window.destroy()
 
-    label0 = tk.Label(window, text='Atualizar mototaxi cadastrado', fg='black', font='bold')
+    label0 = tk.Label(window, text='Atualizar contato mototaxi', fg='black', font='bold')
     label0.place(x=130, y=20)
 
     #label1 = tk.Label(window, text='NOME', fg='black')
@@ -81,8 +81,8 @@ def redirecionar_atualizar():
     #entrada5 = Entry(window)
     #entrada5.place(x=470, y=90)
 
-    label6 = tk.Label(window, text='CPF', fg='black')
-    label6.place(x=220, y=100)
+    label6 = tk.Label(window, text='CÓDIGO', fg='black')
+    label6.place(x=200, y=100)
 
     entrada6 = Entry(window)
     entrada6.place(x=250, y=100)
